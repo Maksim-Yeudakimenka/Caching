@@ -10,7 +10,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Xml;
 
-namespace CachingSolutionsSamples
+namespace CachingSolutionsSamples.Categories
 {
 	class CategoriesRedisCache : ICategoriesCache
 	{

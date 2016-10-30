@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using NorthwindLibrary;
 using System.Runtime.Caching;
 
-namespace CachingSolutionsSamples
+namespace CachingSolutionsSamples.Categories
 {
 	internal class CategoriesMemoryCache : ICategoriesCache
 	{

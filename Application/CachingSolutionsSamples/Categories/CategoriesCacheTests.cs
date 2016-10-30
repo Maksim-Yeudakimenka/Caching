@@ -4,10 +4,10 @@ using NorthwindLibrary;
 using System.Linq;
 using System.Threading;
 
-namespace CachingSolutionsSamples
+namespace CachingSolutionsSamples.Categories
 {
 	[TestClass]
-	public class CacheTests
+	public class CategoriesCacheTests
 	{
 		[TestMethod]
 		public void MemoryCache()

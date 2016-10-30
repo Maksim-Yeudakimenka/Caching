@@ -66,12 +66,22 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CategoriesManager.cs" />
-    <Compile Include="CategoriesMemoryCache.cs" />
-    <Compile Include="CategoriesRedisCache.cs" />
-    <Compile Include="ICategoriesCache.cs" />
-    <Compile Include="CacheTests.cs" />
+    <Compile Include="Categories\CategoriesManager.cs" />
+    <Compile Include="Categories\CategoriesMemoryCache.cs" />
+    <Compile Include="Categories\CategoriesRedisCache.cs" />
+    <Compile Include="Categories\ICategoriesCache.cs" />
+    <Compile Include="Categories\CategoriesCacheTests.cs" />
+    <Compile Include="Customers\CustomersCacheTests.cs" />
+    <Compile Include="Customers\CustomersManager.cs" />
+    <Compile Include="Customers\CustomersMemoryCache.cs" />
+    <Compile Include="Customers\CustomersRedisCache.cs" />
+    <Compile Include="Customers\ICustomersCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shippers\ShippersCacheTests.cs" />
+    <Compile Include="Shippers\ShippersManager.cs" />
+    <Compile Include="Shippers\IShippersCache.cs" />
+    <Compile Include="Shippers\ShippersMemoryCache.cs" />
+    <Compile Include="Shippers\ShippersRedisCache.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -83,6 +93,7 @@
       <Name>NorthwindLibrary</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
