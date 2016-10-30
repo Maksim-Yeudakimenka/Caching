@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
@@ -41,9 +42,11 @@ namespace CachingSolutionsSamples.Customers
             }
             else
             {
+                var expirationTime = TimeSpan.FromMinutes(1);
+
                 var stream = new MemoryStream();
                 _serializer.WriteObject(stream, customers);
-                db.StringSet(key, stream.ToArray());
+                db.StringSet(key, stream.ToArray(), expirationTime);
             }
         }
     }

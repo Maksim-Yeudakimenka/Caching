@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
 using NorthwindLibrary;
@@ -41,9 +42,11 @@ namespace CachingSolutionsSamples.Shippers
             }
             else
             {
+                var expirationTime = TimeSpan.FromMinutes(1);
+
                 var stream = new MemoryStream();
                 _serializer.WriteObject(stream, shippers);
-                db.StringSet(key, stream.ToArray());
+                db.StringSet(key, stream.ToArray(), expirationTime);
             }
         }
     }
